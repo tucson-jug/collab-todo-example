@@ -6,6 +6,10 @@ class Todo {
 	Date completedDate
 	String priority
 	String status 
+	User owner
+	Category category
+	
+	static belongsTo = [User, Category]	
 	
 	static constraints = {
 		name(blank: false)

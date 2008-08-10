@@ -6,11 +6,18 @@ class TodoTests extends GroovyTestCase {
     
     void testPersist() {
     	def now = new Date()
-    	new Todo(name: "1", createdDate: now, priority: "1", status: "1").save()
-    	new Todo(name: "2", createdDate: now, priority: "1", status: "1").save()
-    	new Todo(name: "3", createdDate: now, priority: "1", status: "1").save()
-    	new Todo(name: "4", createdDate: now, priority: "1", status: "1").save()
-    	new Todo(name: "5", createdDate: now, priority: "1", status: "1").save()
+    	def me = new User(userName:'lenards', firstName: 'Andrew', lastName: 'Lenards')
+    	def home = new Category(name: "home", description: "")
+    	new Todo(name: "1", createdDate: now, category: home,
+    			owner: me, priority: "1", status: "1").save()
+    	new Todo(name: "2", createdDate: now, category: home,
+    			owner: me, priority: "1", status: "1").save()
+    	new Todo(name: "3", createdDate: now, category: home,
+    			owner: me, priority: "1", status: "1").save()
+    	new Todo(name: "4", createdDate: now, category: home,
+    			owner: me, priority: "1", status: "1").save()
+    	new Todo(name: "5", createdDate: now, category: home,
+    			owner: me, priority: "1", status: "1").save()
     	
     	assert 5 == Todo.count()
     	def actualTodo = Todo.findByName("1")

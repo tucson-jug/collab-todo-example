@@ -5,8 +5,11 @@ class CategoryTests extends GroovyTestCase {
 	}
 	
 	void testPersist() {
-		new Category(name: "home", description: "todos related to home").save()
-		new Category(name: "work", description: "todos related to work").save()
+    	def me = new User(userName:'lenards', firstName: 'Andrew', lastName: 'Lenards')
+		new Category(name: "home", description: "todos related to home", 
+					user: me).save()
+		new Category(name: "work", description: "todos related to work", 
+					user: me).save()
 		
 		assert 2 == Category.count()
 		
