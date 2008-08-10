@@ -1,3 +1,3 @@
-class TodoController {
+class UserController {
     def scaffold = true
 }
