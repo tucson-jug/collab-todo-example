@@ -7,7 +7,9 @@ class TodoTests extends GroovyTestCase {
     void testPersist() {
     	def now = new Date()
     	def me = new User(userName:'lenards', firstName: 'Andrew', lastName: 'Lenards')
+    	me.save()
     	def home = new Category(name: "home", description: "")
+    	home.save()
     	new Todo(name: "1", createdDate: now, category: home,
     			owner: me, priority: "1", status: "1").save()
     	new Todo(name: "2", createdDate: now, category: home,

@@ -6,6 +6,8 @@ class CategoryTests extends GroovyTestCase {
 	
 	void testPersist() {
     	def me = new User(userName:'lenards', firstName: 'Andrew', lastName: 'Lenards')
+    	me.save()
+    	
 		new Category(name: "home", description: "todos related to home", 
 					user: me).save()
 		new Category(name: "work", description: "todos related to work", 

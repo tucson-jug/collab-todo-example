@@ -8,6 +8,7 @@ class Category {
 	
 	static constraints = {
 		name(blank: false)
+		user(nullable: true)
 	}
 	
 	String toString() {
