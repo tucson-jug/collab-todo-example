@@ -1,0 +1,8 @@
+web-app/WEB-INF/classes
+web-app/WEB-INF/lib
+web-app/WEB-INF/grails-app
+web-app/WEB-INF/spring
+tests/classes
+tests/reports
+staging
+*~
