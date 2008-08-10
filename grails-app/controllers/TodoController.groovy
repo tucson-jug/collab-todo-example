@@ -1,0 +1,4 @@
+class TodoController {
+
+    def index = { }
+}
